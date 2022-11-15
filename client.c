@@ -8,6 +8,7 @@ void	sendbits(int pid, char *s)
 	int	bit;
 	char	c;
 
+	bit = 7;
 	while(*s)
 	{
 		c = *s++;
