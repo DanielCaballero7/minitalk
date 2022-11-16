@@ -1,14 +1,14 @@
 #include <unistd.h>
-#include <sys/types.h>
 #include <signal.h>
 #include "libft/libft.h"
+#include <stdlib.h>
 
 int	ft_sleep(int i)
 {
 	static int	recived;
 	if (!recived)
 		recived = 0;
-	if (i = 0)
+	if (i == 0)
 		recived++;
 	return(recived);
 }
@@ -55,7 +55,7 @@ void	sendbits(int pid, char *s)
 
 int main (int argc, char **argv)
 {
-	if (argc != 3 || ft_strlen(argv[2]))
+	if (argc != 3 || !ft_strlen(argv[2]))
 		return(1);
 	signal(SIGUSR1, recive_signals);
 	signal(SIGUSR2, recive_signals);

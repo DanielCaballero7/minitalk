@@ -29,7 +29,7 @@ clean:
 	make -C libft clean
 	
 fclean: clean
-	rm -f server client server_bonus client_bonus libft/libft.a
+	rm -f server client bonus_server bonus_client libft/libft.a
 
 re: fclean all
 
