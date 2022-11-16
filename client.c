@@ -19,8 +19,7 @@ void	sendbits(int pid, char *s)
 			else
 				kill(pid, SIGUSR1);
 			bit--;
-				usleep(100);
-		
+			usleep(100);
 		}
 		bit = 7;
 	} 
@@ -31,7 +30,5 @@ int main (int argc, char **argv)
 		if (argc != 3)
 			return(0);
 		sendbits(ft_atoi(argv[1]), argv[2]);
-		while (1)
-			pause();
 		return(0);
 }
